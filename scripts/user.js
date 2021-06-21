@@ -150,6 +150,8 @@ document
             db.update("users", user);
         });
         db.remove("books", isbn);
+        document.querySelector(".book-info").classList.remove("shown");
+        window.location.reload();
     });
 
 document
@@ -162,7 +164,10 @@ document
                     due.setDate(due.getDate() + 15);
                     user.borrowed[i].due = due;
                     db.update("users", user);
+                    break;
                 }
             }
+            document.querySelector(".book-info").classList.remove("shown");
+            window.location.reload();
         });
     });

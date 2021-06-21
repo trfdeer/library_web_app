@@ -3,7 +3,7 @@
 import Dexie from "./vendor/dexie.js";
 
 function getDb() {
-    const db = new Dexie("BiblioDb");
+    const db = new Dexie("LibraryDb");
     db.version(1).stores({
         books: "&isbn,title,author,subtitle,description,cover",
         users: "&id,profileimg,name,borrowed",
