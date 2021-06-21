@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="static/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="static/vendor/fontawesome/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/browse.css" />
+    <title>Home | Biblio</title>
+</head>
+
+<body>
+    <section class="navbar grid">
+        <h1 class="logo">Biblio</h1>
+        <nav>
+            <ul class="grid">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="selected" href="browse.html">Browse</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a href="user.html">Profile</a></li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="menubar">
+        <form class="search-form">
+            <input type="search" name="q" placeholder="Search Book" />
+        </form>
+    </section>
+
+    <section class="books">
+        <h1 id="status">Search For a Book</h1>
+        <div class="grid" id="book-list"></div>
+    </section>
+
+    <div class="book-info card">
+        <div class="card-title grid">
+            <h2 class="title"></h2>
+            <i class="fa fa-window-close"></i>
+        </div>
+        <div class="card-contents grid">
+            <img src="" alt="Book Cover" />
+            <p class="subtitle"></p>
+            <div>
+                <h2>Author</h2>
+                <p class="author"></p>
+            </div>
+            <div>
+                <h2>Description</h2>
+                <p class="description"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="book-borrow card">
+        <div class="card-title grid">
+            <h2 class="title"></h2>
+            <i class="fa fa-window-close"></i>
+        </div>
+        <div class="card-contents grid">
+            <p class="author"></p>
+            <form id="borrow-form" class="grid">
+                <input type="text" name="isbn" readonly="" hidden="">
+                <label for="accountNumber">Account Number</label>
+                <input type="text" name="accountNumber" id="accountNumber" value="default">
+                <input type="submit" value="Borrow" class="btn">
+            </form>
+        </div>
+    </div>
+
+    <script type="module" src="scripts/books.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+.profile h2 {
+    height: 30px;
+}
+
+.profile img {
+    border-radius: 50%;
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: 10px auto;
+}
+
+#user-profile.grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr;
+}
+
+.profile {
+    margin-bottom: 20px;
+}
+
+#user-profile div {
+    margin: 10px;
+    text-align: center;
+}
+
+input#userName {
+    text-align: center;
+    font-size: 1.2em;
+    color: var(--primary-fg);
+    background-color: rgba(220, 220, 220, 0.1);
+}
+
+/* *** Book Info *** */
+
+.book-info > .card-contents {
+    height: 450px;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 1fr 3fr 1fr;
+}
+
+.book-info .subtitle {
+    grid-column: 1 / span 2;
+}
+
+.book-info img {
+    grid-column: 1;
+    grid-row: 2 / span 4;
+    margin: auto 0;
+}
+
+.book-info p {
+    margin: auto 0;
+}
+
+.book-info .buttons {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .book-info > .card-contents {
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 1fr 2fr 1fr;
+    }
+
+    .book-info img {
+        height: 150px;
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .book-info p {
+        text-align: left;
+    }
+
+    .book-info .subtitle {
+        grid-column: 2;
+    }
+
+    .book-info .card-contents > div {
+        grid-column: 1 / span 2;
+    }
+}

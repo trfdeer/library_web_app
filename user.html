@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="static/images/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="static/vendor/fontawesome/css/fontawesome-all.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="static/css/user.css" />
+    <title>Home | Biblio</title>
+</head>
+
+<body>
+    <section class="navbar grid">
+        <h1 class="logo">Biblio</h1>
+        <nav>
+            <ul class="grid">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Browse</a></li>
+                <li><a href="help.html">Help</a></li>
+                <li><a class="selected" href="user.html">Profile</a></li>
+            </ul>
+        </nav>
+    </section>
+    <section class="profile">
+        <h2>Profile</h2>
+        <form id="user-profile" class="grid">
+            <div>
+                <img class="profile-image" src="static/images/blank.png" alt="profile" capture />
+                <input type="file" name="img" id="img" />
+                <div>
+                    <input type="text" name="userName" id="userName" />
+                </div>
+            </div>
+        </form>
+    </section>
+    <section class="books">
+        <div class="container">
+            <h2>Borrowed Books</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Book Name</th>
+                        <th>Issued Date</th>
+                        <th>Due Date</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </section>
+
+    <div class="book-info card">
+        <div class="card-title grid">
+            <h2 class="title"></h2>
+            <i class="fa fa-window-close"></i>
+        </div>
+        <div class="card-contents grid">
+            <img src="" alt="Book Cover" />
+            <p class="subtitle"></p>
+            <div>
+                <h2>Author</h2>
+                <p class="author"></p>
+            </div>
+            <div>
+                <h2>Description</h2>
+                <p class="description"></p>
+            </div>
+            <div class="buttons">
+                <button class="btn return-button">Return</button>
+                <button class="btn reissue-button">Re-Issue</button>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="footer"></section>
+    <script type="module" src="scripts/user.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,219 @@
+:root {
+    --primary-fg: #fffffa;
+    --primary-bg: #333138;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Raleway", sans-serif;
+    background-color: var(--primary-bg);
+    color: var(--primary-fg);
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@font-face {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../fonts/raleway-v19-latin-regular.woff2") format("woff2"),
+        url("../fonts/raleway-v19-latin-regular.woff") format("woff");
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+i {
+    font-size: 1.2em;
+}
+
+.head {
+    margin: 10px auto;
+}
+
+.mail {
+    color: var(--primary-fg);
+    font-style: italic;
+}
+
+.selected {
+    background-color: rgba(220, 220, 220, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* *** Form *** */
+form {
+    width: 100%;
+    height: 100%;
+    line-height: 30px;
+    grid-template-columns: 1fr 2fr;
+}
+
+form input:not([type="submit"]) {
+    background: rgba(220, 220, 220, 0.4);
+    border: none;
+    height: 30px;
+    padding: 2px;
+    border-radius: 5px;
+    transition: all 0.2s;
+}
+
+form input:not([type="submit"]):hover {
+    background: rgba(220, 220, 220, 0.5);
+}
+
+form input:not([type="submit"]):focus {
+    outline: none;
+}
+
+form input[type="submit"] {
+    grid-column: 1 / span 2;
+}
+
+form .btn {
+    height: 80%;
+    width: 70%;
+    margin: auto;
+}
+
+/* *** Button *** */
+.btn {
+    padding: 5px 10px;
+    background: rgba(220, 220, 220, 0.4);
+    color: var(--primary-fg);
+    transition: all 0.2s;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.btn::selection {
+    outline: none;
+}
+
+.btn:hover {
+    transform: scale(0.989);
+    background: rgba(220, 220, 220, 0.45);
+}
+
+/* *** Card *** */
+.card {
+    position: absolute;
+    height: 500px;
+    width: 50%;
+    max-width: 750px;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 4px 1px rgba(220, 220, 220, 0.3);
+    z-index: 999;
+    opacity: 0;
+    transition: all 0.3s;
+    visibility: hidden;
+    background-color: var(--primary-bg);
+    grid-template-columns: 1fr;
+}
+
+.shown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.card-title {
+    grid-template-columns: 90% 10%;
+    width: 100%;
+    height: 30px;
+}
+
+.card-title i {
+    text-align: end;
+    margin: auto 0;
+}
+
+/* *** Navbar *** */
+
+.navbar > * {
+    height: 50px;
+}
+
+.logo {
+    padding-top: 10px;
+}
+
+.navbar {
+    border-bottom: 1px solid var(--primary-fg);
+    margin-bottom: 20px;
+}
+
+nav ul.grid {
+    list-style-type: none;
+    grid-template-columns: repeat(4, 1fr);
+    height: 100%;
+}
+
+nav li {
+    text-align: center;
+}
+
+nav a {
+    line-height: 50px;
+    text-decoration: none;
+    color: var(--primary-fg);
+}
+
+/* *** Table ** */
+table {
+    margin-top: 50px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 10px 0;
+    border-right: 1px solid var(--primary-fg);
+    border-left: 1px solid var(--primary-fg);
+}
+tbody > tr:last-child {
+    border-bottom: 1px solid var(--primary-fg);
+}
+thead > tr {
+    background-color: rgba(220, 220, 220, 0.2);
+    border: 1px solid var(--primary-fg);
+}
+tbody > tr {
+    transition: all 0.1s;
+    cursor: default;
+}
+
+tbody > tr:hover {
+    background-color: rgba(220, 220, 220, 0.1);
+}
+
+@media (max-width: 768px) {
+    .logo {
+        text-align: center;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .card {
+        width: 95%;
+    }
+    .card-title {
+        grid-template-columns: 90% 10%;
+        height: 60px;
+    }
+}
